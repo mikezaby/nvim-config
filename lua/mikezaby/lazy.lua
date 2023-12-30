@@ -16,5 +16,7 @@ require("lazy").setup({
     'nvim-telescope/telescope.nvim', branch = '0.1.x',
     dependencies = { 'nvim-lua/plenary.nvim' }
   },	
-  { 'Yazeed1s/minimal.nvim' }
+  { 'Yazeed1s/minimal.nvim' },
+  { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' }
+  { 'nvim-treesitter/playground' }
 })
