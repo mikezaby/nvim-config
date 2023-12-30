@@ -17,6 +17,7 @@ require("lazy").setup({
     dependencies = { 'nvim-lua/plenary.nvim' }
   },	
   { 'Yazeed1s/minimal.nvim' },
-  { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' }
-  { 'nvim-treesitter/playground' }
+  { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
+  { 'nvim-treesitter/playground' },
+  { 'mbbill/undotree' },
 })
