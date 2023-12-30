@@ -28,5 +28,6 @@ require("lazy").setup({
       "nvim-telescope/telescope.nvim", -- optional
     },
     config = true
-  }
+  },
+  { "lewis6991/gitsigns.nvim", config = true }
 })

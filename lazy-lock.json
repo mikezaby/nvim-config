@@ -1,5 +1,6 @@
 {
   "diffview.nvim": { "branch": "main", "commit": "3dc498c9777fe79156f3d32dddd483b8b3dbd95f" },
+  "gitsigns.nvim": { "branch": "main", "commit": "d195f0c35ced5174d3ecce1c4c8ebb3b5bc23fa9" },
   "lazy.nvim": { "branch": "main", "commit": "96584866b9c5e998cbae300594d0ccfd0c464627" },
   "minimal.nvim": { "branch": "main", "commit": "22d837b814d3bd22625640ef63cc73b8507f291d" },
   "neogit": { "branch": "master", "commit": "23fc43f50d768f8f7a017e0778b0643526a5a507" },
