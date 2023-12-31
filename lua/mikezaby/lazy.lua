@@ -16,7 +16,11 @@ require("lazy").setup({
     'nvim-telescope/telescope.nvim', branch = '0.1.x',
     dependencies = { 'nvim-lua/plenary.nvim' }
   },
-  { 'Yazeed1s/minimal.nvim' },
+  {
+    'AlexvZyl/nordic.nvim',
+    lazy = false,
+    priority = 1000,
+  },
   { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
   { 'nvim-treesitter/playground' },
   { 'mbbill/undotree' },

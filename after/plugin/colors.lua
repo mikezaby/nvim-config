@@ -1,1 +1,1 @@
-vim.cmd[[colorscheme minimal-base16]] -- for minimal-base16
+vim.cmd[[colorscheme nordic]]
