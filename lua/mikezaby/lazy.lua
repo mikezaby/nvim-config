@@ -12,10 +12,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-  {
-    'nvim-telescope/telescope.nvim', branch = '0.1.x',
-    dependencies = { 'nvim-lua/plenary.nvim' }
-  },
+  -- UI
   {
     'AlexvZyl/nordic.nvim',
     lazy = false,
@@ -23,16 +20,6 @@ require("lazy").setup({
   },
   { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
   { 'nvim-treesitter/playground' },
-  { 'mbbill/undotree' },
-  {
-    "NeogitOrg/neogit",
-    dependencies = {
-      "nvim-lua/plenary.nvim",         -- required
-      "sindrets/diffview.nvim",        -- optional - Diff integration
-      "nvim-telescope/telescope.nvim", -- optional
-    },
-    config = true
-  },
 
   { "lewis6991/gitsigns.nvim", config = true },
   {
@@ -49,24 +36,6 @@ require("lazy").setup({
   {
     "norcalli/nvim-colorizer.lua",
   },
-
-  { "preservim/nerdcommenter" },
-  {
-    'goolord/alpha-nvim',
-    dependencies = { 'nvim-tree/nvim-web-devicons' },
-    config = function ()
-      require'alpha'.setup(require'alpha.themes.startify'.config)
-    end
-  },
-  {
-    'windwp/nvim-autopairs',
-    event = "InsertEnter",
-    opts = {} -- this is equalent to setup({}) function
-  },
-  {
-    'windwp/nvim-ts-autotag',
-    config = true
-  },
   { 'nacro90/numb.nvim', opts = { show_numbers = true } },
 
   -- LSP
@@ -80,5 +49,38 @@ require("lazy").setup({
       {'hrsh7th/nvim-cmp'},
       {'L3MON4D3/LuaSnip'},
     }
+  },
+
+  -- Utils
+  {
+    'goolord/alpha-nvim',
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
+    config = function ()
+      require'alpha'.setup(require'alpha.themes.startify'.config)
+    end
+  },
+  {
+    'nvim-telescope/telescope.nvim', branch = '0.1.x',
+    dependencies = { 'nvim-lua/plenary.nvim' }
+  },
+  {
+    "NeogitOrg/neogit",
+    dependencies = {
+      "nvim-lua/plenary.nvim",         -- required
+      "sindrets/diffview.nvim",        -- optional - Diff integration
+      "nvim-telescope/telescope.nvim", -- optional
+    },
+    config = true
+  },
+  { 'mbbill/undotree' },
+  { "preservim/nerdcommenter" },
+  {
+    'windwp/nvim-autopairs',
+    event = "InsertEnter",
+    opts = {} -- this is equalent to setup({}) function
+  },
+  {
+    'windwp/nvim-ts-autotag',
+    config = true
   },
 })
