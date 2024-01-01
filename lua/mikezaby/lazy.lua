@@ -67,6 +67,7 @@ require("lazy").setup({
     'windwp/nvim-ts-autotag',
     config = true
   },
+  { 'nacro90/numb.nvim', opts = { show_numbers = true } },
 
   -- LSP
   { 'VonHeikemen/lsp-zero.nvim', 
