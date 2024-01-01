@@ -46,6 +46,9 @@ require("lazy").setup({
     dependencies = 'nvim-tree/nvim-web-devicons',
     config = true
   },
+  {
+    "norcalli/nvim-colorizer.lua",
+  },
 
   { "preservim/nerdcommenter" },
   {
