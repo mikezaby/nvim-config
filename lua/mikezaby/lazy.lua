@@ -50,6 +50,10 @@ require("lazy").setup({
       {'L3MON4D3/LuaSnip'},
     }
   },
+  {
+    "stevearc/conform.nvim",
+    event = { "BufReadPre", "BufNewFile" },
+  },
 
   -- Utils
   {
