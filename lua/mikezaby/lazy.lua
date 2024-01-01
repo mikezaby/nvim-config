@@ -33,12 +33,20 @@ require("lazy").setup({
     },
     config = true
   },
+
   { "lewis6991/gitsigns.nvim", config = true },
   {
     'nvim-lualine/lualine.nvim',
     config = true,
     dependencies = { 'nvim-tree/nvim-web-devicons' }
   },
+  { 
+    'akinsho/bufferline.nvim', 
+    version = "*", 
+    dependencies = 'nvim-tree/nvim-web-devicons',
+    config = true
+  },
+
   { "preservim/nerdcommenter" },
   {
     'goolord/alpha-nvim',
