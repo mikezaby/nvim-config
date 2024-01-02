@@ -13,11 +13,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
   -- UI
-  {
-    'AlexvZyl/nordic.nvim',
-    lazy = false,
-    priority = 1000,
-  },
+  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
   { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
   { 'nvim-treesitter/playground' },
 

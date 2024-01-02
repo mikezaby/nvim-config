@@ -1,2 +1,2 @@
-vim.cmd[[colorscheme nordic]]
+vim.cmd.colorscheme "catppuccin-macchiato"
 require("colorizer").setup()
