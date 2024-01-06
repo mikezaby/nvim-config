@@ -27,7 +27,6 @@ require("lazy").setup({
     'akinsho/bufferline.nvim', 
     version = "*", 
     dependencies = 'nvim-tree/nvim-web-devicons',
-    config = true
   },
   {
     "norcalli/nvim-colorizer.lua",
