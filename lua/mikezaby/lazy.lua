@@ -45,6 +45,8 @@ require("lazy").setup({
       {'L3MON4D3/LuaSnip'},
     }
   },
+  { 'hrsh7th/cmp-buffer' },
+  { 'hrsh7th/cmp-path' },
   {
     "stevearc/conform.nvim",
     event = { "BufReadPre", "BufNewFile" },
