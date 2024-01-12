@@ -9,18 +9,6 @@ require('mason-lspconfig').setup({
   },
   handlers = {
     lsp.default_setup,
-    tsserver = function()
-      --- in this function you can setup
-      --- the language server however you want. 
-      --- in this example we just use lspconfig
-
-      lspconfig.tsserver.setup({
-        ---
-        -- in here you can add your own
-        -- custom configuration
-        ---
-      })
-    end,
   },
 })
 
