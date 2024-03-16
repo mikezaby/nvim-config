@@ -86,4 +86,8 @@ require("lazy").setup({
 		"windwp/nvim-ts-autotag",
 		config = true,
 	},
+	{
+		"RaafatTurki/hex.nvim",
+		config = true,
+	},
 })
