@@ -90,4 +90,5 @@ require("lazy").setup({
 		"RaafatTurki/hex.nvim",
 		config = true,
 	},
+	{ "ellisonleao/glow.nvim", config = true, cmd = "Glow" },
 })
