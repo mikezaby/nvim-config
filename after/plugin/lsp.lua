@@ -6,6 +6,8 @@ require("mason-lspconfig").setup({
 		"tsserver",
 		"eslint",
 		"rust_analyzer",
+		"ltex",
+		"marksman",
 	},
 	handlers = {
 		lsp.default_setup,
