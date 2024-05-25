@@ -13,6 +13,7 @@ conform.setup({
 		json = { "prettier" },
 		yaml = { "prettier" },
 		markdown = { "prettier" },
+		mdx = { "prettier" },
 		graphql = { "prettier" },
 		lua = { "stylua" },
 	},
