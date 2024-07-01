@@ -7,6 +7,7 @@ require("mason-lspconfig").setup({
 		"eslint",
 		"rust_analyzer",
 		"ltex",
+		"kotlin_language_server",
 		"marksman",
 	},
 	handlers = {
