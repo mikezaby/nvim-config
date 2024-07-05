@@ -5,14 +5,14 @@ vim.opt.expandtab = true
 vim.bo.softtabstop = 2
 
 -- Set the characters for displaying tabs and trailing spaces
-vim.opt.listchars = { tab = '>-', space = '·' }
+vim.opt.listchars = { tab = ">-", space = "·" }
 vim.opt.list = true
 
 vim.opt.wrap = false
 vim.opt.number = true
 vim.opt.smartindent = true
 
-vim.opt.clipboard= 'unnamedplus'
+vim.opt.clipboard = "unnamedplus"
 
 vim.opt.swapfile = false
 vim.opt.backup = false
