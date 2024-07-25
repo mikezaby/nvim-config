@@ -52,6 +52,14 @@ require("lazy").setup({
 		"stevearc/conform.nvim",
 		event = { "BufReadPre", "BufNewFile" },
 	},
+	{ "dmmulroy/tsc.nvim", config = {
+      flags = {
+        noEmit = true,
+        skipLibCheck = true,
+        watch = false,
+      },
+    } 
+  },
 
 	-- Utils
 	{
