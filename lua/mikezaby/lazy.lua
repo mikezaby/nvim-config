@@ -55,12 +55,17 @@ require("lazy").setup({
 	{
 		"dmmulroy/tsc.nvim",
 		config = {
+			auto_open_qflist = false,
 			flags = {
 				noEmit = true,
 				skipLibCheck = true,
-				watch = false,
+				watch = true,
 			},
 		},
+	},
+	{
+		"dmmulroy/ts-error-translator.nvim",
+		config = true,
 	},
 
 	-- Utils
