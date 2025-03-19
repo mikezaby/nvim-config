@@ -1,4 +1,5 @@
 local lsp = require("lsp-zero")
+local plainLsp = require("lspconfig")
 
 require("mason").setup({})
 require("mason-lspconfig").setup({
@@ -14,6 +15,8 @@ require("mason-lspconfig").setup({
 		lsp.default_setup,
 	},
 })
+
+plainLsp.gleam.setup({})
 
 local cmp = require("cmp")
 
