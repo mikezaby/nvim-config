@@ -1,6 +1,11 @@
 local conform = require("conform")
 
 conform.setup({
+	formatters = {
+		prettier = {
+			require_cwd = true,
+		},
+	},
 	formatters_by_ft = {
 		rust = { "rustfmt" },
 		javascript = { "prettier" },
