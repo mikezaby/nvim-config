@@ -56,6 +56,7 @@ require("lazy").setup({
 		"dmmulroy/tsc.nvim",
 		config = {
 			auto_open_qflist = false,
+			run_as_monorepo = true,
 			flags = {
 				noEmit = true,
 				skipLibCheck = true,
