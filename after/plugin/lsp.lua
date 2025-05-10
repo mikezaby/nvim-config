@@ -6,6 +6,7 @@ require("mason-lspconfig").setup({
 	ensure_installed = {
 		"ts_ls",
 		"eslint",
+		"stylelint_lsp",
 		"rust_analyzer",
 		"ltex",
 		"kotlin_language_server",
@@ -14,6 +15,22 @@ require("mason-lspconfig").setup({
 	handlers = {
 		lsp.default_setup,
 	},
+})
+
+plainLsp.stylelint_lsp.setup({
+	filetypes = {
+		"astro",
+		"css",
+		"html",
+		"less",
+		"scss",
+		"sugarss",
+		"vue",
+		"wxss",
+		"javascriptreact",
+		"typescriptreact",
+	},
+	settings = {},
 })
 
 plainLsp.gleam.setup({})
@@ -31,9 +48,10 @@ cmp.setup({
 lsp.on_attach(function(client, bufnr)
 	local opts = { buffer = bufnr, remap = false }
 
-	vim.keymap.set("n", "gd", function()
-		vim.lsp.buf.definition()
-	end, opts)
+	--vim.keymap.set("n", "gd", function()
+	--vim.lsp.buf.definition()
+	--end, opts)
+	vim.keymap.set("n", "gd", "<cmd>tab split | lua vim.lsp.buf.definition()<CR>", {})
 	vim.keymap.set("n", "K", function()
 		vim.lsp.buf.hover()
 	end, opts)

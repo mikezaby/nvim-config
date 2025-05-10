@@ -10,10 +10,10 @@ conform.setup({
 		rust = { "rustfmt" },
 		javascript = { "prettier" },
 		typescript = { "prettier" },
-		javascriptreact = { "prettier" },
-		typescriptreact = { "prettier" },
+		javascriptreact = { "prettier", "stylelint" },
+		typescriptreact = { "prettier", "stylelint" },
 		svelte = { "prettier" },
-		css = { "prettier" },
+		css = { "prettier", "stylelint" },
 		html = { "prettier" },
 		json = { "prettier" },
 		yaml = { "prettier" },
@@ -25,6 +25,6 @@ conform.setup({
 	format_on_save = {
 		lsp_fallback = true,
 		async = false,
-		timeout_ms = 500,
+		timeout_ms = 2000,
 	},
 })
