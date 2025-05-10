@@ -34,3 +34,18 @@ vim.opt.colorcolumn = "80"
 
 -- Set vsplit buffer to right
 vim.opt.splitright = true
+
+-- UI for diagnostic
+vim.diagnostic.config({
+	virtual_text = true, -- inline text (set to false if you dislike it)
+	signs = true, -- signs in gutter
+	underline = true,
+	update_in_insert = false,
+	severity_sort = true,
+	float = {
+		border = "rounded",
+		source = "always", -- shows the source (e.g., eslint)
+		header = "",
+		prefix = "",
+	},
+})

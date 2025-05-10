@@ -12,7 +12,9 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-	-- UI
+	------------------
+	--      UI      --
+	------------------
 	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 	{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
 	{ "nvim-treesitter/playground" },
@@ -32,11 +34,21 @@ require("lazy").setup({
 		"norcalli/nvim-colorizer.lua",
 	},
 	{ "nacro90/numb.nvim", opts = { show_numbers = true } },
+	{
+		"folke/noice.nvim",
+		event = "VeryLazy",
+		dependencies = {
+			"MunifTanjim/nui.nvim",
+			"rcarriga/nvim-notify",
+		},
+	},
 
-	-- LSP
+	-------------------
+	--      LSP      --
+	-------------------
 	{
 		"VonHeikemen/lsp-zero.nvim",
-		branch = "v3.x",
+		branch = "v4.x",
 		dependencies = {
 			{ "williamboman/mason.nvim" },
 			{ "williamboman/mason-lspconfig.nvim" },
@@ -54,7 +66,7 @@ require("lazy").setup({
 	},
 	{
 		"dmmulroy/tsc.nvim",
-		config = {
+		opts = {
 			auto_open_qflist = false,
 			run_as_monorepo = true,
 			flags = {
@@ -69,7 +81,9 @@ require("lazy").setup({
 		config = true,
 	},
 
-	-- Utils
+	---------------------
+	--      Utils      --
+	---------------------
 	{
 		"goolord/alpha-nvim",
 		dependencies = { "nvim-tree/nvim-web-devicons" },
