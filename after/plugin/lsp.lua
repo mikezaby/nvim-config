@@ -53,8 +53,6 @@ cmp.setup({
 	mapping = cmp.mapping.preset.insert({}),
 })
 
--- UI
-
 -- LSP keymaps
 vim.api.nvim_create_autocmd("LspAttach", {
 	desc = "LSP actions",

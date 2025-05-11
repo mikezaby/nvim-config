@@ -66,15 +66,6 @@ require("lazy").setup({
 	},
 	{
 		"dmmulroy/tsc.nvim",
-		opts = {
-			auto_open_qflist = false,
-			run_as_monorepo = true,
-			flags = {
-				noEmit = true,
-				skipLibCheck = true,
-				watch = true,
-			},
-		},
 	},
 	{
 		"dmmulroy/ts-error-translator.nvim",
