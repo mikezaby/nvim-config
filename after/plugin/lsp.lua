@@ -64,7 +64,39 @@ vim.api.nvim_create_autocmd("LspAttach", {
 	callback = function(event)
 		local opts = { buffer = event.buf }
 
-		vim.keymap.set("n", "gd", "<cmd>tab split | lua vim.lsp.buf.definition()<CR>", {})
+		-- Got to definition, open to new tab or go to already opened file
+		vim.keymap.set("n", "gd", function()
+			local params = vim.lsp.util.make_position_params()
+			vim.lsp.buf_request(0, "textDocument/definition", params, function(_, result)
+				if not result or vim.tbl_isempty(result) then
+					vim.notify("No definition found", vim.log.levels.INFO)
+					return
+				end
+				local def = result[1]
+				local uri = def.uri or def.targetUri
+				local range = def.range or def.targetRange
+				local fname = vim.uri_to_fname(uri)
+
+				-- Check if buffer is open in any tab
+				for _, tab in ipairs(vim.api.nvim_list_tabpages()) do
+					for _, win in ipairs(vim.api.nvim_tabpage_list_wins(tab)) do
+						local bufnr = vim.api.nvim_win_get_buf(win)
+						if vim.api.nvim_buf_get_name(bufnr) == fname then
+							vim.api.nvim_set_current_tabpage(tab)
+							vim.api.nvim_set_current_win(win)
+							-- Jump to location
+							vim.api.nvim_win_set_cursor(win, { range.start.line + 1, range.start.character })
+							return
+						end
+					end
+				end
+
+				-- Not found, open in new tab
+				vim.cmd("tabnew " .. fname)
+				local win = vim.api.nvim_get_current_win()
+				vim.api.nvim_win_set_cursor(win, { range.start.line + 1, range.start.character })
+			end)
+		end, { desc = "Go to LSP definition (reuse tab if open, else new tab)" })
 
 		vim.keymap.set("n", "K", function()
 			vim.lsp.buf.hover()
