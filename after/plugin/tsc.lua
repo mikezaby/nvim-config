@@ -1,6 +1,7 @@
 require("tsc").setup({
 	auto_open_qflist = true,
-	use_trouble_qflist = false,
+	auto_close_qflist = true,
+	auto_start_watch_mode = true,
 
 	vim.api.nvim_create_autocmd("BufWritePost", {
 		pattern = { "*.ts", "*.tsx" },

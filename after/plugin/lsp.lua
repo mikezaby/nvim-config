@@ -13,6 +13,7 @@ masonLsp.setup({
 		"ts_ls",
 		"eslint",
 		"stylelint_lsp",
+		"tailwindcss",
 		"rust_analyzer",
 		"ltex",
 		"kotlin_language_server",
@@ -39,6 +40,10 @@ plainLsp.stylelint_lsp.setup({
 })
 
 plainLsp.gleam.setup({})
+
+plainLsp.tsserver.setup({
+	root_dir = require("lspconfig.util").find_git_ancestor,
+})
 
 -- CMP setup
 cmp.setup({
