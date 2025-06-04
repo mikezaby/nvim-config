@@ -41,10 +41,6 @@ plainLsp.stylelint_lsp.setup({
 
 plainLsp.gleam.setup({})
 
-plainLsp.tsserver.setup({
-	root_dir = require("lspconfig.util").find_git_ancestor,
-})
-
 -- CMP setup
 cmp.setup({
 	sources = {
