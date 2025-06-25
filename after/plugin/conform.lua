@@ -21,6 +21,7 @@ conform.setup({
 		mdx = { "prettier" },
 		graphql = { "prettier" },
 		lua = { "stylua" },
+		--kotlin = { "ktfmt" },
 	},
 	format_on_save = {
 		lsp_fallback = true,

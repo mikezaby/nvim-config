@@ -16,7 +16,7 @@ masonLsp.setup({
 		"tailwindcss",
 		"rust_analyzer",
 		"ltex",
-		"kotlin_language_server",
+		"kotlin_lsp",
 		"marksman",
 	},
 	automatic_enable = true,
