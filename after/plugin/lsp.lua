@@ -46,6 +46,9 @@ cmp.setup({
 	sources = {
 		{ name = "nvim_lsp" },
 		{ name = "buffer" },
+		per_filetype = {
+			codecompanion = { "codecompanion" },
+		},
 	},
 	snippet = {
 		expand = function(args)
