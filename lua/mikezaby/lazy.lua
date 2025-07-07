@@ -140,7 +140,6 @@ require("lazy").setup({
 		config = true,
 	},
 	{ "mbbill/undotree" },
-	{ "preservim/nerdcommenter" },
 	{
 		"windwp/nvim-autopairs",
 		event = "InsertEnter",
