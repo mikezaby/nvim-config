@@ -4,22 +4,18 @@ local cmp = require("cmp")
 local mason = require("mason")
 local masonLsp = require("mason-lspconfig")
 
--- Setup Mason
 mason.setup({})
-
--- Setup Mason-LSP with lsp-zero's handler
 masonLsp.setup({
 	ensure_installed = {
 		"ts_ls",
 		"eslint",
 		"stylelint_lsp",
 		"tailwindcss",
-		"rust_analyzer",
 		"ltex",
 		"kotlin_lsp",
 		"marksman",
+		"nil_ls",
 	},
-	automatic_enable = true,
 })
 
 -- Custom LSP servers not managed by mason
@@ -38,8 +34,6 @@ plainLsp.stylelint_lsp.setup({
 	},
 	settings = {},
 })
-
-plainLsp.gleam.setup({})
 
 -- CMP setup
 cmp.setup({

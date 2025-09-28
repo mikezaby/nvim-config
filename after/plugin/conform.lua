@@ -21,7 +21,8 @@ conform.setup({
 		mdx = { "prettier" },
 		graphql = { "prettier" },
 		lua = { "stylua" },
-		--kotlin = { "ktfmt" },
+		nix = { "nixfmt" },
+		kotlin = { "ktlint" },
 	},
 	format_on_save = {
 		lsp_fallback = true,

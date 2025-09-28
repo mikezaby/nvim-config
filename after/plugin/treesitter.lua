@@ -2,7 +2,19 @@ vim.treesitter.language.register("markdown", { "mdx" })
 
 require("nvim-treesitter.configs").setup({
 	-- A list of parser names, or "all" (the five listed parsers should always be installed)
-	ensure_installed = { "vim", "vimdoc", "lua", "c", "query", "javascript", "typescript", "kotlin", "css", "styled" },
+	ensure_installed = {
+		"vim",
+		"vimdoc",
+		"lua",
+		"c",
+		"query",
+		"javascript",
+		"typescript",
+		"kotlin",
+		"css",
+		"styled",
+		"rust",
+	},
 
 	-- Install parsers synchronously (only applied to `ensure_installed`)
 	sync_install = false,

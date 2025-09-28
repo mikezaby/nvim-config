@@ -72,6 +72,11 @@ require("lazy").setup({
 		"dmmulroy/ts-error-translator.nvim",
 		config = true,
 	},
+	{
+		"mrcjkb/rustaceanvim",
+		version = "^6", -- Recommended
+		lazy = false, -- This plugin is already lazy
+	},
 
 	---------------------
 	--      Utils      --
