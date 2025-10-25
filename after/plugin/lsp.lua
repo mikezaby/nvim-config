@@ -1,5 +1,3 @@
-local lsp = require("lsp-zero")
-local plainLsp = require("lspconfig")
 local cmp = require("cmp")
 local mason = require("mason")
 local masonLsp = require("mason-lspconfig")
@@ -18,8 +16,7 @@ masonLsp.setup({
 	},
 })
 
--- Custom LSP servers not managed by mason
-plainLsp.stylelint_lsp.setup({
+vim.lsp.config.stylelint_lsp = {
 	filetypes = {
 		"astro",
 		"css",
@@ -33,7 +30,7 @@ plainLsp.stylelint_lsp.setup({
 		"typescriptreact",
 	},
 	settings = {},
-})
+}
 
 -- CMP setup
 cmp.setup({

@@ -47,20 +47,16 @@ require("lazy").setup({
 	-------------------
 	--      LSP      --
 	-------------------
-	{
-		"VonHeikemen/lsp-zero.nvim",
-		branch = "v4.x",
-		dependencies = {
-			{ "williamboman/mason.nvim" },
-			{ "williamboman/mason-lspconfig.nvim" },
-			{ "neovim/nvim-lspconfig" },
-			{ "hrsh7th/cmp-nvim-lsp" },
-			{ "hrsh7th/nvim-cmp" },
-			{ "L3MON4D3/LuaSnip" },
-		},
-	},
+	{ "williamboman/mason.nvim" },
+	{ "williamboman/mason-lspconfig.nvim" },
+	{ "neovim/nvim-lspconfig" },
+
+	{ "hrsh7th/cmp-nvim-lsp" },
+	{ "hrsh7th/nvim-cmp" },
 	{ "hrsh7th/cmp-buffer" },
 	{ "hrsh7th/cmp-path" },
+	{ "L3MON4D3/LuaSnip" },
+
 	{
 		"stevearc/conform.nvim",
 		event = { "BufReadPre", "BufNewFile" },
