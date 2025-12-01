@@ -73,6 +73,7 @@ require("lazy").setup({
 		version = "^6", -- Recommended
 		lazy = false, -- This plugin is already lazy
 	},
+	{ "nvim-java/nvim-java" },
 
 	---------------------
 	--      Utils      --
