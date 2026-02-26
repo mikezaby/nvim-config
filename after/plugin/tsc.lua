@@ -1,3 +1,5 @@
+local tsc_utils = require("tsc.utils")
+
 require("tsc").setup({
 	auto_open_qflist = true,
 	auto_close_qflist = true,
@@ -6,7 +8,7 @@ require("tsc").setup({
 	flags = {
 		noEmit = true,
 		project = function()
-			return utils.find_nearest_tsconfig()
+			return tsc_utils.find_nearest_tsconfig()[1]
 		end,
 	},
 
