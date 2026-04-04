@@ -13,6 +13,7 @@ masonLsp.setup({
 		"kotlin_lsp",
 		"marksman",
 		"nil_ls",
+		"jsonls",
 	},
 })
 
