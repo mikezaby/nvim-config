@@ -74,6 +74,7 @@ require("lazy").setup({
 		lazy = false, -- This plugin is already lazy
 	},
 	{ "nvim-java/nvim-java" },
+	{ "slint-ui/vim-slint" },
 
 	---------------------
 	--      Utils      --

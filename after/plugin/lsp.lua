@@ -14,6 +14,7 @@ masonLsp.setup({
 		"marksman",
 		"nil_ls",
 		"jsonls",
+		"slint_lsp",
 	},
 })
 
