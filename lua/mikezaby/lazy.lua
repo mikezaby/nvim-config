@@ -16,7 +16,6 @@ require("lazy").setup({
 	--      UI      --
 	------------------
 	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
-	{ "nvim-treesitter/nvim-treesitter-context", config = true },
 
 	{ "lewis6991/gitsigns.nvim", config = true },
 	{
@@ -167,7 +166,6 @@ require("lazy").setup({
 		opts = {},
 		dependencies = {
 			"nvim-lua/plenary.nvim",
-			"nvim-treesitter/nvim-treesitter",
 		},
 	},
 })
