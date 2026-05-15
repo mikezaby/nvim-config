@@ -15,6 +15,7 @@ masonLsp.setup({
 		"nil_ls",
 		"jsonls",
 		"slint_lsp",
+		"ruby_lsp",
 	},
 })
 
