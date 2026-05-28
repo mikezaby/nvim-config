@@ -60,7 +60,8 @@ vim.api.nvim_create_autocmd("LspAttach", {
 
 		-- Got to definition, open to new tab or go to already opened file
 		vim.keymap.set("n", "gd", function()
-			local params = vim.lsp.util.make_position_params()
+			local client = vim.lsp.get_clients({ bufnr = event.buf })[1]
+			local params = vim.lsp.util.make_position_params(0, client and client.offset_encoding or "utf-16")
 			vim.lsp.buf_request(0, "textDocument/definition", params, function(_, result)
 				if not result or vim.tbl_isempty(result) then
 					vim.notify("No definition found", vim.log.levels.INFO)
